@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.netlify/
+.DS_Store
+preview*.html
+# raw generated sheets are big; the cut icons and tier art in site/art/ are what the page uses
+art/raw/
+art/logs/*.log
+art/logs/*.run
+art/ref-caveman.png
+# one-off editorial passes over levels.json
+tools/pass-*.py

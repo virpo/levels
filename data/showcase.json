@@ -1,0 +1,69 @@
+[
+ {
+  "name": "Peter Hraska",
+  "handle": "virpo",
+  "x": "virpo",
+  "photo": "virpo.jpg",
+  "result": {
+   "v": 4,
+   "s": "yyyyyyyyyyyyyyyyyyyyyyyynyyynyyyyyyyyyysyynnyyysyyyyssyynyssnnyysnyynssyyysyysyynysyyyysysyssn?ysysn",
+   "a": [
+    "Claude Code",
+    "Codex"
+   ],
+   "pi": 1,
+   "p": [
+    [
+     25,
+     "You ask it to verify constantly; a failing test first makes the proof automatic."
+    ],
+    [
+     44,
+     "You skip permission prompts almost every session; a guard hook is the seatbelt."
+    ],
+    [
+     61,
+     "Over a thousand runs with prompts off and no sandbox; a fresh VM makes that safe."
+    ]
+   ],
+   "e": {
+    "2": "307 file edits recently",
+    "3": "532 prompts give the reason",
+    "5": "332 prompts with screenshots",
+    "7": "superwhisper and OpenWhispr installed",
+    "8": "24 interrupted turns",
+    "16": "51 requests for variants",
+    "17": "grill-me, ask-me prompts",
+    "18": "67 asks for a call or a critique",
+    "24": "agent-browser, Playwright",
+    "26": "506 agent commits",
+    "30": "1,587 queued prompts",
+    "31": "gh, netlify, supabase, vercel, fly",
+    "32": "7 disk and brew checks",
+    "33": "12 small repos of his own",
+    "36": "101 PRs opened by agents",
+    "38": "61 /model, 15 /effort",
+    "39": "CodexBar installed",
+    "42": "143 recent subagent runs",
+    "45": "63 memory notes",
+    "46": "10 repos share one rules file",
+    "50": "34 worktrees in one repo",
+    "52": "298 cross-agent runs",
+    "55": "101 CI status checks",
+    "56": "Claude launches Codex for images",
+    "63": "5 agent LaunchAgents",
+    "64": "busy at night, no prompts",
+    "73": "36 messages between agents",
+    "79": "16 codebase-wide changes",
+    "82": "skills in public repos",
+    "84": "Hyperframes and Remotion renders",
+    "85": "personal wiki, use-me-wiki skill",
+    "87": "release-gate skill",
+    "89": "an old repo running again",
+    "91": "rules file shrank once",
+    "96": "Stream Deck, simctl",
+    "98": "OpenClaw installed and running"
+   }
+  }
+ }
+]

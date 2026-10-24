@@ -1,0 +1,165 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+__HEAD__
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Nanum+Pen+Script&display=swap">
+<style>/*__CSS__*/</style>
+
+<header class="bar" id="bar">
+  <div class="bar-in">
+    <a class="brand" href="__B__" data-home><span class="word">levels</span><span class="by">by @virpo</span></a>
+    <div class="bar-r">
+      <a class="mine" id="mine" href="__B__" hidden></a>
+      <span class="mine live mono" id="live" hidden></span>
+      <a class="gh" id="gh" href="#" target="_blank" rel="noopener" aria-label="Source on GitHub" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+      <button class="theme" type="button" id="theme" aria-label="Theme: system"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.8a6.2 6.2 0 0 1 0 12.4z" fill="currentColor"/></svg></button>
+      <button class="key acc bar-cta" type="button" id="bar-cta" data-cta data-from="bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="bar-cta-t">See your level</span></button>
+    </div>
+  </div>
+  <div class="pop" id="pop" hidden>
+    <p class="pop-h">Copied. Paste it into your agent.</p>
+    <code class="pop-line mono" data-prompt></code>
+    <p class="pop-p">Claude Code, Codex or Cursor. A read-only script looks around your machine, then your card opens here.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="hero">
+    <div class="copy">
+      <div id="copy-home">
+        <h1>What level are you with agents?</h1>
+        <p class="lede">100 tricks, from your first prompt to your own agent. Your agent checks which ones you use.</p>
+      </div>
+
+      <div id="copy-result" hidden>
+        <p class="eyebrow mono" id="res-kicker"></p>
+        <h1 class="res-h"><span class="res-num" id="res-num"></span><span class="res-of">/100</span></h1>
+        <p class="res-era" id="res-era"></p>
+        <p class="res-line" id="res-line"></p>
+        <p class="res-rank mono" id="res-rank" hidden></p>
+        <div class="noticed" id="noticed" hidden><p class="noticed-k mono">Your agent noticed <span>· only you see this</span></p><ul class="mono" id="noticed-list"></ul></div>
+      </div>
+
+      <!-- the one action, on the landing page and under someone else's card: the yellow key turns into the wait -->
+      <div id="go">
+        <div class="cta" id="cta-box">
+          <button class="key acc big" type="button" id="cta" data-cta data-from="hero"><span class="cta-t">See your level</span><svg class="cta-i" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 10.5V3.6C3 3.3 3.3 3 3.6 3h6.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="wait" id="wait" aria-live="polite">
+            <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="wait-b">
+              <p class="wait-h" id="wait-h"></p>
+              <p class="wait-p" id="wait-p"></p>
+              <p class="wait-f mono"><span id="wait-t"></span><button class="linkish" type="button" id="wait-again">Copy it again</button><a href="__B__check.md">What it runs</a></p>
+            </div>
+          </div>
+          <button class="line mono" type="button" data-cta data-from="line" aria-label="Copy the prompt"><span data-prompt></span></button>
+          <p class="agents mono" aria-label="Works in Claude Code, Cursor and Codex"><span class="agents-k">works in</span><span class="agent" data-agent="claudecode"><i></i>Claude Code</span><span class="agent" data-agent="cursor"><i></i>Cursor</span><span class="agent" data-agent="codex"><i></i>Codex</span></p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="stage" id="stage">
+      <div class="fan" id="fan"></div>
+      <figcaption class="ticker mono" id="ticker"></figcaption>
+      <!-- under your card: make it yours, then share it, with the card right above so you see what goes out -->
+      <div class="yours" id="yours" hidden>
+        <div class="step">
+          <p class="step-k mono"><b>1</b>Make it yours</p>
+          <div class="step-row">
+            <button class="key" type="button" id="photo-b" data-photo></button>
+            <label class="namefield"><span class="sr">Name on card</span><input id="card-name" maxlength="32" placeholder="Your name" autocomplete="off"></label>
+          </div>
+          <button class="linkish mono" type="button" id="photo-rm" hidden>Remove photo</button>
+          <input type="file" id="photo-in" accept="image/*" hidden>
+        </div>
+        <div class="step">
+          <p class="step-k mono"><b>2</b>Share it</p>
+          <div class="step-row">
+            <button class="key ink" type="button" id="share-x"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M12.2 1.5h2.2L9.6 7l5.6 7.5h-4.4L7.4 9.9l-3.9 4.6H1.3l5.1-5.9L1 1.5h4.5l3.1 4.2zm-.8 11.7h1.2L4.7 2.7H3.4z"/></svg>Post on X</button>
+            <button class="key" type="button" id="share-png"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 10.5V3.6C3 3.3 3.3 3 3.6 3h6.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Copy card</button>
+          </div>
+          <p class="link mono"><a id="card-url" href="#" target="_blank" rel="noopener"></a><button class="copyb" type="button" id="share-link" aria-label="Copy the link"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 10.5V3.6C3 3.3 3.3 3 3.6 3h6.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></p>
+          <p class="note mono" id="share-note" role="status"></p>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section class="next" id="next" hidden>
+    <div class="picks-wrap">
+      <h2 class="label mono">Where you'd start</h2>
+      <div class="picks" id="picks"></div>
+    </div>
+    <div class="getyours">
+      <h2 class="label mono">Try an agent in ten minutes</h2>
+      <button class="line mono" type="button" data-cta data-from="chat"><span data-prompt></span></button>
+      <p class="muted">Install one, open a folder you care about, and paste the same line.</p>
+      <ul class="install">
+        <li><a href="https://claude.com/download" target="_blank" rel="noopener">Claude desktop app</a> <span class="muted">Claude Code is built in</span></li>
+        <li><a href="https://chatgpt.com/codex" target="_blank" rel="noopener">Codex</a> <span class="muted">from OpenAI, app or CLI</span></li>
+        <li><a href="https://cursor.com/download" target="_blank" rel="noopener">Cursor</a> <span class="muted">an editor with an agent inside</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- the map: ten eras of ten. Yours lights up; on arrival every key is still waiting -->
+  <section class="map" id="map" aria-labelledby="map-title">
+    <div class="sec-h"><h2 id="map-title">The 100</h2><p class="muted" id="map-sub"></p></div>
+    <div class="map-in">
+      <div class="board" id="board" aria-label="The 100 levels, ten eras of ten"></div>
+      <aside class="insp" id="insp" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <!-- your result: only what's left, the three picks first; what you have folds away -->
+  <section class="unlock" id="unlock" hidden aria-labelledby="unlock-title">
+    <div class="sec-h"><h2 id="unlock-title">Unlock next <span class="count mono" id="unlock-n"></span></h2><p class="muted" id="unlock-sub"></p></div>
+    <div class="u-list" id="unlock-list"></div>
+    <details class="have" id="have"><summary><span id="have-t"></span><span class="chev" aria-hidden="true">›</span></summary><div class="u-list" id="have-list"></div></details>
+    <p class="keep muted" id="keep">Your card is saved anonymously at its link: the 100 answers and the agents you use. What your agent noticed stays in your own link. A name and photo go up only when you share. <button class="linkish" type="button" id="forget">Delete my card</button></p>
+  </section>
+
+  <section class="list" id="list" aria-label="All 100, in order">
+    <p class="l0"><span class="mono">0</span><span><b data-l0-title></b> <span class="muted" data-l0-line></span></span></p>
+    <div id="tiers">__PRERENDER__</div>
+  </section>
+
+  <section class="fossils" id="fossils" aria-labelledby="fossils-title">
+    <h2 id="fossils-title">Fossil record</h2>
+    <p class="muted">The list is always 100. When a new level earns its place, an old one goes extinct and moves here.</p>
+    <div class="fossil-grid" id="fossil-grid"></div>
+    <p class="suggest" id="suggest" hidden>Know one that belongs here? <a id="suggest-a" href="#" target="_blank" rel="noopener">Suggest a level</a></p>
+  </section>
+
+  <section class="notify" aria-labelledby="notify-title">
+    <div>
+      <h2 id="notify-title">More levels are coming</h2>
+      <p class="muted">Agents change monthly, so the list will too. Leave your email and you'll hear from me each time 20 new levels are in, and only if they're worth your time. Nothing else.</p>
+    </div>
+    <form class="mail" id="mail">
+      <label class="sr" for="mail-email">Email</label>
+      <div class="mail-row"><input id="mail-email" type="email" placeholder="you@example.com" autocomplete="email" required><button class="key" type="submit">Tell me</button></div>
+      <p class="note mono" id="mail-note" role="status"></p>
+    </form>
+  </section>
+
+  <footer class="foot">
+    <div>
+      <h2 class="label mono">How it works</h2>
+      <p>Your level is how many of the 100 you do; the order decides your tier. Your agent reads <a href="__B__check.md">check.md</a>, runs a read-only <a href="__B__probe.py">probe</a> that prints names and counts, judges each level, and opens this page with the result in the link after the #. The page saves the 100 answers anonymously, so your card has a link and the stats count it; what your agent noticed stays in your link, and a name or photo goes up only when you share. What it can't see from your machine, you tick yourself, and your card says so.</p>
+      <p>Each level links to someone who does it, in their own words. Where good engineers disagree, both sides are there.</p>
+    </div>
+    <div>
+      <h2 class="label mono">Who made this</h2>
+      <p>Peter Hraska (<a href="https://x.com/virpo">@virpo</a>). I spend an unhealthy amount of time with agents and talk to a lot of people about how they use them. "I use AI a lot" turned out to mean very different things, so I wrote down the tricks that are actually worth your time.</p>
+      <p>The whole list is open as <a href="__B__levels.md">Markdown</a> and <a href="__B__levels.json">JSON</a>. Wrong check, missing trick, one that should go extinct? <span id="tell-gh" hidden>Open an issue on <a id="issues-a" href="#">GitHub</a> or tell</span><span id="tell-x">Tell</span> me on <a href="https://x.com/virpo">X</a>.</p>
+    </div>
+  </footer>
+</main>
+
+<div class="og-host" aria-hidden="true"><div class="og" id="og"></div></div>
+<div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+<script id="data" type="application/json">__DATA__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js" defer></script>
+<script>/*__JS__*/</script>

@@ -1,0 +1,50 @@
+[
+ {
+  "name": "Grug, day 1",
+  "result": {
+   "v": 4,
+   "s": "yynyyy?nyynnyyynnnnnnnnnnnnnnnnnnnnnnynnnnnnnnnnnnnnnnnnnnnnnnnn??nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+   "a": [
+    "Cursor"
+   ],
+   "pi": 1,
+   "p": [
+    [
+     3,
+     ""
+    ],
+    [
+     8,
+     ""
+    ],
+    [
+     11,
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "name": "Grug, day 400",
+  "result": {
+   "v": 4,
+   "s": "yyyyyynyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyssyyysyyyyyyyyyyyysyyyyyyyyyyynyyyyy",
+   "a": [
+    "Pi",
+    "Claude Code",
+    "Codex"
+   ],
+   "pi": 0,
+   "p": [
+    [
+     7,
+     ""
+    ],
+    [
+     95,
+     ""
+    ]
+   ]
+  }
+ }
+]

@@ -1,0 +1,9 @@
+ok icons-t2
+ok icons-t3
+ok icons-t4
+ok icons-t5
+ok icons-t6
+ok icons-t7
+ok icons-t8
+ok icons-t9
+ok icons-t10

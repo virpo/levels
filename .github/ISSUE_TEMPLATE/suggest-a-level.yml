@@ -1,0 +1,35 @@
+name: Suggest a level
+description: A trick that belongs in the 100, or one that should go extinct
+title: "Level: "
+labels: [suggestion]
+body:
+  - type: input
+    id: level
+    attributes:
+      label: The level
+      description: A short title that names the concrete thing, like the ones on the page.
+      placeholder: Let it babysit the PR
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: What it changes for someone who starts doing it, and roughly where in the 100 it sits.
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who does it
+      description: A link to someone describing it in their own words (a post, a talk, a repo). Optional, but it helps a lot.
+  - type: textarea
+    id: check
+    attributes:
+      label: How an agent could tell
+      description: What it could see on a machine from names and counts alone (a config file, a command in the history). "Only the person can tell" is a fine answer.
+  - type: input
+    id: extinct
+    attributes:
+      label: Which level goes extinct for it
+      description: The list is always 100. Optional.
