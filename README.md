@@ -47,7 +47,7 @@ The code is MIT. The list itself (`data/levels.json`) is CC BY 4.0: reuse it, wi
 | `site/index.html`, `app.css`, `app.js` | the page, plain HTML/CSS/JS, data inlined at build |
 | `site/art/` | pixel icons per level, a caveman per tier |
 | `tools/build.py` | builds `dist/`: page with the list prerendered, `og.png`, `levels.md`, `llms.txt`, `check.md`, `probe.py` (needs agent-browser), or a one-file preview |
-| `tools/gen.sh`, `tools/slice.py` | image generation through Codex, and cutting sheets into icons (snapped to their pixel grid); the prompts are in `art/logs/` |
+| `tools/gen.sh`, `tools/slice.py` | image generation through Codex, and cutting sheets into icons (`art/icons.json` says which sheet and icon each level uses); the prompts are in `art/logs/` |
 
 `netlify/functions/` holds what people choose to keep: `levels.mjs` (anonymous counts, published cards at `/u/<name>-<id>/`
 with their own preview image, stats) and `notify.mjs` (the "20 new levels" email list). Netlify site `levels-virpo`.

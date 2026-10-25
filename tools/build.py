@@ -101,6 +101,8 @@ def head(d):
         f'<link rel="canonical" href="{URL}">',
         '<meta name="theme-color" content="#F4F0E7" media="(prefers-color-scheme: light)">',
         '<meta name="theme-color" content="#0E0D0A" media="(prefers-color-scheme: dark)">',
+        # a theme someone chose, applied before anything paints
+        '<script>try { const t = JSON.parse(localStorage.getItem("levels-theme")); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch {}</script>',
         f'<link rel="icon" href="{ASSETS}favicon.png" sizes="32x32"><link rel="apple-touch-icon" href="{ASSETS}apple-touch-icon.png">',
         f'<link rel="alternate" type="text/markdown" href="{URL}levels.md" title="The 100 levels as Markdown">',
         '<meta property="og:type" content="website">', '<meta property="og:site_name" content="levels">', '<meta property="og:locale" content="en">',
@@ -152,7 +154,7 @@ def main():
     d = json.loads((ROOT / "data/levels.json").read_text())
     assert [l["n"] for l in d["levels"]] == list(range(1, 101)), "levels must be 1..100, in order"
     assert len({l["id"] for l in d["levels"]}) == 100, "level ids must be unique"
-    icon_files = {p.stem: p for p in (SITE / "art/icons").glob("*.png")}   # by level id, so reordering the list never needs a rename
+    icon_files = {p.stem: p for p in (SITE / "art/icons").glob("*.webp")}   # by level id, so reordering the list never needs a rename
     assert {l["id"] for l in d["levels"]} >= set(icon_files), "an icon for a level that no longer exists"
     art_files = {int(p.stem): p for p in (SITE / "art/tiers").glob("*.webp")}
     photo_files = {p.name: p for p in (SITE / "art/people").glob("*.jpg")}
@@ -169,7 +171,7 @@ def main():
         shutil.rmtree(DIST)
     shutil.copytree(SITE / "art", DIST / "art")
     # absolute URLs: the same page is also served by card pages on the API host
-    icons = {k: f"{ASSETS}art/icons/{k}.png" for k in icon_files}
+    icons = {k: f"{ASSETS}art/icons/{k}.webp" for k in icon_files}
     art = {n: f"{ASSETS}art/tiers/{n}.webp" for n in art_files}
     photos = {k: f"{ASSETS}art/people/{k}" for k in photo_files}
     ver = lambda f: hashlib.sha1((SITE / f).read_bytes()).hexdigest()[:10]
