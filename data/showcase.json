@@ -6,21 +6,14 @@
   "photo": "virpo.jpg",
   "result": {
    "v": 4,
-   "s": "yyyyyyyyyyyyyyyyyyyyyyyynyyynyyyyyyyyyysyynnyyysyyyyssyynyssnnyysnyynssyyysyysyynysyyyysysyssnyysysn",
+   "s": "yyyyyyyyyyyyyyyyyyyyyyyyyysynyyyyyyyyyyyyynsyyssyyysyyyynyssnnyys?yynsssyyyyynyy?ysyyysnysyssn?ynysn",
    "a": [
     "Claude Code",
-    "Codex"
+    "Codex",
+    "OpenClaw"
    ],
    "pi": 1,
    "p": [
-    [
-     25,
-     "You ask it to verify constantly; a failing test first makes the proof automatic."
-    ],
-    [
-     44,
-     "You skip permission prompts almost every session; a guard hook is the seatbelt."
-    ],
     [
      61,
      "Over a thousand runs with prompts off and no sandbox; a fresh VM makes that safe."
