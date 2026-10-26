@@ -19,7 +19,7 @@
 import { getStore } from "@netlify/blobs";
 import { limiter } from "./lib/limits.mjs";
 
-const ORIGIN = "https://levels-virpo.netlify.app";   /* where card pages live; levels.virpo.io once its DNS is set */
+const ORIGIN = "https://levels-virpo.netlify.app";   /* where card pages live, until virpo.io can serve them */
 const PAGE = "https://virpo.io/levels/";              /* the page itself, on GitHub Pages; it opens a card from ?u=id */
 const FALLBACK = `${PAGE}og.png`;                     /* a card's preview until the page has drawn its own */
 const store = () => getStore({ name: "levels", consistency: "strong" });
@@ -214,7 +214,7 @@ async function image(id, kind) {
 }
 
 /* the page lives on virpo.io and calls these endpoints from there */
-const ALLOWED = ["https://virpo.io", "https://levels-virpo.netlify.app", "https://levels.virpo.io"];
+const ALLOWED = ["https://virpo.io", "https://levels-virpo.netlify.app"];
 function withCors(req, res) {
   const o = req.headers.get("origin");
   if (o && ALLOWED.includes(o) && !(res.status >= 300 && res.status < 400)) {

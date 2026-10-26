@@ -22,7 +22,7 @@ TITLE = "What level are you with agents? · levels"
 PROMPT = (f"What level am I with coding agents? Follow {SITE_HOST}/check.md from start to finish without stopping to ask me. "
           f"It runs a read-only script that counts things on this machine (agents, settings, skills, how I prompt; never file "
           f"contents, and the script sends nothing), scores 100 techniques and opens my result in the browser.")
-REPO = None   # set to the public repo URL once it exists; the page then shows a GitHub link
+REPO = "https://github.com/virpo/levels"   # the page shows a GitHub link, "Suggest a level" and the issues
 DESC = ("The 100 tricks worth your time with coding agents, from pasting screenshots to writing your own agent, collected from 94 "
         "engineers worth watching. Paste one prompt: your agent checks which you use, on your own machine, and suggests what to try next.")
 

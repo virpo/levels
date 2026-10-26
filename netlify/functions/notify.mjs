@@ -10,7 +10,7 @@ import { limiter } from "./lib/limits.mjs";
 const admit = limiter("notify-limits", [[5, 60_000], [20, 86_400_000]]);
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
 
-const ALLOWED = ["https://virpo.io", "https://levels-virpo.netlify.app", "https://levels.virpo.io"];
+const ALLOWED = ["https://virpo.io", "https://levels-virpo.netlify.app"];
 function withCors(req, res) {
   const o = req.headers.get("origin");
   if (o && ALLOWED.includes(o)) { res.headers.set("access-control-allow-origin", o); res.headers.set("vary", "origin"); }

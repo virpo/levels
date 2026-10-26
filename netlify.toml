@@ -1,4 +1,4 @@
-# levels.virpo.io: dist/ is built by tools/build.py; the functions keep what people choose to save.
+# The API and card pages for virpo.io/levels: dist/ is built by tools/build.py; the functions keep what people choose to save.
 [build]
   publish = "dist"
   functions = "netlify/functions"
